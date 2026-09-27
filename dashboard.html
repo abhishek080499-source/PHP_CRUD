@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Header -->
+
+    <div class="header">
+            <h1>Dashboard</h1>
+        <button id="logoutBtn">
+            Logout
+        </button>
+    </div>
+
+
+    <!-- Product Form -->
+
+    <div class="form-box">
+ <h2 id="formTitle"> Add Product </h2>
+
+        <form id="productForm">
+            <input
+                type="hidden"
+                id="productId"
+            >
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Item Name"
+                required
+            >
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                step="0.01"
+                min="0"
+                required
+            >
+            <textarea
+                id="description"
+                placeholder="Description"
+                rows="4"
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                id="submitBtn"
+            > Add Product
+            </button>
+
+        </form>
+
+        <p id="productMessage"></p>
+
+    </div>
+
+
+    <!-- Products -->
+
+    <h2 style="text-align: center; padding-bottom: 20px;">Products</h2>
+
+    <div
+        id="productContainer"
+        class="product-container"
+    ></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
